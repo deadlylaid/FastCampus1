@@ -1,0 +1,76 @@
+body{
+	margin:0;
+
+}
+
+.parent{
+	position: relative;
+	height: 400px;
+	margin:100px 10%;
+	background: #353535;
+	
+}
+
+.child{
+	position:absolute;
+	width:140px;
+	height: 100px;
+	transition: all 0.345s; ease-out;
+	transform: scale(1);
+	box
+
+}
+.child:hover{
+	z-index: 100;
+	transform: scale(1.2);
+}
+
+.child::before{
+	display: block;/*block방식은 div width값 끝까지 영역이 잡힘*/
+	/*display:inline 은 딱 컨텐츠의 크기만큼만 width값이 잡힘*/
+	content: attr(class);
+	color:#fff;
+	font-size:2em;
+	text-align: center;/*text-align:center는 display:block에서만 통하는 코드;*/
+	line-height: 100px
+}
+
+.child:first-child{
+	top:-50px;
+	left:-70px;
+	background: #DA7D85;
+}
+.child:first-child:hover{
+
+	background: #4e292D;
+}
+
+.child:nth-child(2){
+	top:-50px;
+	right: -70px;
+	background: #8064D1;
+}
+
+.child:nth-child(2):hover{
+	background: #312358;
+}
+
+.child:nth-child(3){
+	bottom:-50px;
+	left: -70px;
+	background: #8064D1;
+}
+
+.child:nth-child(3):hover{
+	background: #312358;
+}
+
+.child:last-child{
+	bottom:-50px;
+	right:-70px;
+	background: #6DC5D2;
+}
+
+.child:last-child:hover{
+	background: #2e575e;
+}

@@ -1,0 +1,141 @@
+body{
+	margin:0;
+	font:14px/1.5 Helvetica;
+}
+
+nav ul{
+	list-style-type:none;
+	padding-left:0;
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-right: 0;
+}
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+가상클래스
+상태 디자인
+모든요소에 적용가능한 가상클래스
+:hover
+anchor 요소에 적용가능한 가상 클래스
+:link, :visited, :hover, :active;	
+
+가상요소
+:before, :after, :first-line, :first-letter
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+nav a:link{
+	text-decoration: none;
+	color:red;
+	padding-bottom:0.12em;
+	border-bottom: 1px dotted;
+}
+nav a:visited{/* :를 쓰면 가상 클래스로써 태그안에 클래스 선언을 안해줘도 적용됨*/
+
+	color:blue;
+}
+nav a:hover{
+	
+	/*밑줄 제거 하는 코드*/
+	color: #82AEC9;
+}
+
+
+nav a:active{
+	background:#ff0;
+}
+
+nav a.disabled{
+	cursor:default;
+	color:black;
+}
+
+
+
+.miki{
+	/*position: static;기본값*/
+	 position: relative;
+	 top:90px;
+	 left:160px;
+	 /*  margin과 같은 역할을 하지만 다른 div를 옮기진 않는다*/
+	width: 200px;
+	height: 200px;
+	background-color: black;
+	border-radius: 50%;
+
+}
+
+/*.miki::before,
+.miki::after{
+	content:;
+}
+*/
+/*.ear*/
+
+.miki::before,
+.miki::after {
+	position: absolute;
+	top:-30px;
+	width:100px;
+	height: 100px;
+	background: #010101;
+	border-radius:50%;
+}
+
+.miki::before{
+	left:-40px;
+}
+.miki::after{
+	right:-40px;
+}
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+가상요소
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+.dropcap{
+	margin:0 20% 3em;/* margin:0이면 모든 방향이 top값을 상속받음
+	0, 20%면 left값이 right값을 상속받음*/
+	color: #817e7a;
+	font:15px/1.8 "Times New Roman";
+}
+/*.dropcap .first-letter{
+	float: left;
+	font-size: 4em;
+	color: #046380;
+	line-height: 1; ->글자값의 배수
+
+
+}*/
+
+.dropcap::first-letter{
+	float: left;
+	font-size: 4em;
+	color: blue;
+	line-height: 1;
+	margin-right: 0.3em;
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+새롭게 추가된 디자인
+::-> 가상요소
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+::selection{/*블록설정 할때 나타나는 효과*/
+	background: #FC4A54;
+	color: #FFF;
+}
+
+::selection{
+	background:#FC4A54;
+	color:#FFF;
+}
+
+.demo.first-line{
+	margin-left:14%;
+	margin-right: 14%;
+}
+
+.demo.first-line p {
+	margin-top:0;
+	margin-bottom: 0;
+}
+.demo.first-line p:first-line{
+	background: rgba(255,255,0,0.7);
+}

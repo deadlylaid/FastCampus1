@@ -1,0 +1,92 @@
+body{
+	background-color: black;
+	margin: 0;
+}
+
+.parent{
+	position:relative;
+	height: 300px;
+	margin:100px 10%;
+	background-color: #FFF700;
+}
+
+.child{
+	position: absolute;
+	width: 150px;
+	height: 100px;
+	color: white;
+	transform: scale(1);
+	transition:all 0.5s;ease-out;
+
+	
+}
+
+
+.child:hover{
+	z-index: 100;/* z 축을 기준으로 위로 떠오름 원하는 div를 맨위로*/
+	transform: scale(1.2);
+}
+
+.child::before{
+	display: block;
+	content: attr(class);
+	font-size: 2em;
+	text-align: center;
+	line-height: 100px;
+}
+
+
+.child:first-child{
+	top: -50px;
+	right:  -50px;
+	background-color: #8CFFF7;
+
+}
+
+.child:first-child:hover {
+	background-color: #2D8D97;
+}
+
+
+
+
+.child:nth-child(2){
+	top: -50px;
+	left:  -50px;
+	background: #FF0000;
+}
+
+.child:nth-child(2):hover{
+	background: #8F0303;
+}
+
+.child:nth-child(3){
+	bottom: -50px;
+	right:  -50px;
+	background:#0AFF00;
+}
+
+.child:nth-child(3):hover{
+	background: #087F00;
+}
+
+.child:last-child{
+	background: #000000;
+	bottom: -50px;
+	left:  -50px;
+}
+
+
+
+.child:nth-child(4){
+	bottom: -50px;
+	left:  -50px;
+	background: #FF00F7;
+}
+
+.child:nth-child(4):hover{
+	background: #690076;
+}
+
+
+
