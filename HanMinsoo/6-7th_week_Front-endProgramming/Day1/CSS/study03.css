@@ -1,0 +1,34 @@
+body{
+	margin:0;
+}
+.container{
+	width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.col{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	box-sizing: border-box;
+	/*원래 width값은 컨텐츠값 까지만을 말하는데
+	box-sizing:border-box를 쓰면 width값이 border까지 갑니다.*/
+	width: 180px;
+	height: 80px;
+	float: left;
+	background: blue;
+	color: white;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center;
+	padding:10px;
+	
+}
+
+.col:nth-child(1){background: #4d4d4d; }
+.col:nth-child(2){background: #666666; }
+.col:nth-child(3){background: gray;}
+.col:nth-child(4){background: #999999; }
+.col:nth-child(5){background: #b3b3b3; }
+.col:nth-child(6){background: #cccccc; }

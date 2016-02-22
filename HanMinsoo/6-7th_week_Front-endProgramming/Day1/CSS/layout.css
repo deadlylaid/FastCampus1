@@ -1,0 +1,55 @@
+body {
+	margin: 0;
+}
+
+p {
+	margin-top:0;
+	margin-bottom: 0;
+}
+
+.demo{
+	width: 60%;
+	margin: 80px auto;
+	border:2px;
+	border-color: black;
+}
+
+.demo:nth-child(odd){
+	background:black;
+	color:lightgreen;
+}
+
+
+
+
+
+/*.demo:nth-child(2) {
+	background: #333;
+	color: #fff;
+}*/
+
+
+	
+/*CSS 레이아웃 재사용 모듈*/
+.demo .fl{float: :left;}
+.demo .fr{float: right;}
+
+.demo img{
+	float: left;
+	margin-right: 10px;
+}
+
+/*.demo:nth-child(3n) img{
+	float: right;
+}*/
+/* nth-child 가상 클래스
+body 태그 속에있는 div중에 3의 배수 번 째를 찾아서
+적용*/
+
+/*.demo:nth-of-type(odd) img{
+	float: right;
+}*/
+/* nth-of-type 가상 클래스
+.demo클래스로 정의된 div중에서 홀 수 번째만
+적용*/
+
