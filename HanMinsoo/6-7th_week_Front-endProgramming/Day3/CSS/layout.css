@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import "module.css";
+@import "phonemodul.css";
+.print_name {
+	position: relative;
+}
+
+.print_name::before {
+	content: attr(data-name);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	color: #fff;
+	font-size: 2.4em;
+	transform: translate(-50%, -50%);
+}
+
+header {
+	position: relative;
+	height: 100px;
+	background: #54AEC3;
+}
+
+nav {
+	height: 60px;
+	background: #005F69;
+}
+
+main {
+	height: 60vh;
+	background: #00AA9B;
+}
+
+aside {
+	height: 60vh;
+	background: #7A7A7A;
+}
+
+footer {
+	clear: left;
+	height: 80px;
+	background: #000000;
+}
+
+.post {
+	
+	background: white;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+}
+.phone_display{
+		display: none;
+	}
+.post-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	color: #FF0000;
+}
+
+.post:first-child{
+	background: #96DDFF;
+}
+.post:nth-child(2){
+	background: #737AFF;
+}
+.post:last-child{
+	background: #78FFD7;
+}
+
+@media only screen and (min-width:860px)  {
+	main {
+		float: left;
+		width: 50%;
+	}
+
+	aside {
+		float: left;
+		width: 50%;
+	}
+	.post {
+		float: left;
+	width: 33.33%;
+	height: inherit;
+	}
+	.phone_display{
+		display: block;
+	}
+
+
+}
+
+@media only screen and (min-width:1100px) {
+	main {
+		float: right;
+		width: 80%;
+	}
+
+	main article.post {
+		float: left;
+		width: 33.33%;
+	}
+
+	aside {
+		width: 20%;
+	}
+
+}

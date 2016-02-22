@@ -1,0 +1,101 @@
+@import "common_module/common.css";
+
+
+.parent{
+	position: relative;
+	overflow: hidden;
+	width: 800px;
+	height: 320px;
+	
+}
+
+.BG{
+
+	width: 800px;
+	height: 320px;
+	background: url(../images/BG.png);
+	-webkit-box-reflect: below 2px linear-gradient(180deg, transparent 40%, white) ;
+	/*overflow:hidden; 값이 들어가면 box-reflect가 안먹음*/
+}
+
+.parent img:not([src$="BG.png"]){
+	position: absolute;
+
+}
+
+
+.parent img[src$="apes.png"]{
+	top:169px;
+	left:4px;
+}
+
+
+
+.parent img[src$="golliras.png"]{
+	top:110px;
+	left:100%;
+}
+
+.parent:hover img[src$="golliras.png"]{
+	top:110px;
+	left:11px;
+	-webkit-transition: left .25s ;
+	   -moz-transition: left .25s ;
+	    -ms-transition: left .25s ;
+	     -o-transition: left .25s ;
+	        transition: left .25s ;
+}
+
+
+
+
+
+.parent img[src$="kingkong.png"]{
+	top:28px;
+	left:-296px;
+}
+
+.parent:hover img[src$="kingkong.png"]{
+	top:28px;
+	left:491px;
+	-webkit-transition: left .25s ;
+	   -moz-transition: left .25s ;
+	    -ms-transition: left .25s ;
+	     -o-transition: left .25s ;
+	        transition: left .25s ease;
+}
+
+
+
+.parent img[src$="Fabulously Flexible Website Design.png"]{
+	top:-100px;
+	left:119px;
+}
+
+.parent:hover img[src$="Fabulously Flexible Website Design.png"]{
+	top:31px;
+	left:119px;
+	-webkit-transition: top .25s ;
+	   -moz-transition: top .25s ;
+	    -ms-transition: top .25s ;
+	     -o-transition: top .25s ;
+	        transition: top .25s ;
+}
+
+
+
+
+.parent img[src$="logo.png"]{
+	top:-100px;
+	left:18px;
+}
+
+.parent:hover img[src$="logo.png"]{
+	top:18px;
+	left:18px;
+	-webkit-transition: top .25s ;
+	   -moz-transition: top .25s ;
+	    -ms-transition: top .25s ;
+	     -o-transition: top .25s ;
+	        transition: top .25s ease;
+

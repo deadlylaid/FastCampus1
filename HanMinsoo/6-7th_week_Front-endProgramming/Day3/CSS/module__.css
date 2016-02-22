@@ -1,0 +1,23 @@
+/*html{overflow-y:scroll;} 스크롤바 생성*/
+body{
+	margin:0;
+	/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	ontfont-size/line-hieght font-family;
+	ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/f
+	font:87.5%/1.5 Helvetica, Verdana, Arial, Sans-Serif;
+/*	font:87.5%/1.5 "Malgun gothic", Gulim, Dotum, Sans-Serif;
+	font:bold 87.5%/1.76ㅉ "Malgun gothic", Gulim, Dotum, Sans-Serif;*/
+	/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+	폰트 두께 100 ~ 900
+	ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+font family를 여러개를 쓰면 폰트가 없을때
+2번째 3번째 순으로 간다.
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+*,*::before, *::after{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+} /*가상요소에 박스사이즈 적용  */
