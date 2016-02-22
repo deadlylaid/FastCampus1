@@ -1,0 +1,71 @@
+@charset  "utf-8";
+
+
+body{
+	margin:0;
+	padding:1rem;
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+
+.flex-container{
+	/**/
+	align-items:flex-start;
+
+	/* flexbox로 설정하겠습니다*/
+	display: flex;
+
+
+	/*Flexbox의 방향을 설정하는 것*/
+	flex-direction:row;
+
+	/*flexbox의 포괄성을 설정하는 것*/
+	flex-wrap:wrap;
+	
+
+	/*w정렬하기*/
+	/*justify-content: space-around;*/
+	/*	
+		flex-start
+		center
+		flex-end
+		space-between
+		space-around
+	*/
+	border:3px solid #E9E924;
+	align-items:flex-start;
+
+}
+
+.flex-item{
+
+	/*flex-grow:1; container의 공간에 각각의 1:1:1.... 비율로 채운다*/
+	/*flex-shrink:0; 0이면 item의 크기를 제한하지 않는다. 1이면 container의 크기에 맞춰서 item의 크기를 줄인다*/
+	flex-grow:1;
+	padding :1rem;
+}
+
+.flex-item:nth-child(1){background:#B64926; height: 100px; flex-grow:2;}
+.flex-item:nth-child(2){background:#88AB1D;}
+.flex-item:nth-child(3){background:#25AABB;}
+.flex-item:nth-child(4){background:#88AB1D;}
+
+.flex-item:first-child{
+	/*order:1;*/
+	/* 순서값을 말한다. item의 기본값은 order :0이다 숫자가 클수록 오른쪽으로 가게된다.*/
+}
+
+.flex-item:last-child{
+	/*order:-1;*/
+	/* 순서값을 말한다. item의 기본값은 order :0이다 숫자가 클수록 오른쪽으로 가게된다.*/
+}
+
+.flex-item em{
+	font-style:  normal;
+	font-size: 1.2rem;
+}
