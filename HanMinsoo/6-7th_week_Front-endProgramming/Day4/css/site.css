@@ -1,0 +1,43 @@
+@charset "utf-8";
+@import "grid-system.css";
+/*그리드 시스템 모듈을 호출*/
+@import "reset.css";
+@import "common.css";
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+페이지 디자인을 위해 쓰는 코드
+.header
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+body{
+	background: #bababa;
+}
+.header{
+	/*height: 100vh;*/
+	/*border-left: 1px solid #000;
+	border-right: 1px solid #000;*/
+	/*background: #000;*/
+}
+
+.page{
+
+}
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+'>'표시는 해당 클래스 직계 자손 을 말합니다.
+예를 들어 .page > div라면
+<page>
+	<div></div>
+</page>는 적용되지만
+#########################
+<page>
+	<col>
+		<div></div>
+	</col>
+</page>는 직계자손이 아니므로 
+적용되지 않는다.
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/*.page > div{
+	height: 80px;
+	background: #000;
+}*/

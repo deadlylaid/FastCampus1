@@ -1,0 +1,119 @@
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+그리드 시스템 설계.css
+페이지 폭 1200px
+컬럼 개수 12
+거터 폭 20px(10px 10px)->구분선 두깨
+컬럼 폭 1200/12 -20 = 80px
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+그리드 컨테이너를 설계하겠습니다.
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+body{
+	margin-top: 0;
+}
+.container{
+	width: 1200px;
+	height: 1000px;
+	margin: 0 auto;/*가운데로 배치해줌*/
+}
+
+.container.grid{
+	background: url(../image/grid-module.png);
+	
+/*	background-color:;
+	background-image:; 
+	background-repeat:;
+	background-position: ;
+	background-attachment: ;
+	->배경이미지를 넣으면 스크롤올릴때 배경이미지도 같이 올라가는데 attachment 코드를 넣으면 배경이미지는 멈춰있고 */
+}
+
+.container::after{
+	content: '';
+	display:block;
+	clear: both; 
+	/*하단 div에 float효과에 영향받지 않게하기*/
+}
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+로우를 만드는 코드(행)
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+
+.row::after{
+	content:'';
+	display: block;
+	clear:both;
+}
+.row{
+	margin-bottom:30px;
+}
+
+
+/*ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+하단에 있는 div는
+컬럼을 만든 코드입니다.
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ*/
+/*.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12
+하단의 class선언된 것은
+클래스중에 col-이 포함되는 모든 클래스를...
+이라는 뜻입니다.*/
+[class*="col-"]{
+	float: left;
+	height: 150px;
+	background: #000;
+	margin: 0 10px;
+	margin-top: 40px;
+
+}
+
+/*width:(80px * 1 + 20px * (1-1));*/
+.col-1{width: 80px;}
+.col-2{ width:  180px;}
+.col-3{ width: 280px;}
+.col-4{width:380px;}
+.col-5{width: 480px;}
+.col-6{width: 580px;}
+.col-7{width: 680px;}
+.col-8{width: 780px;}
+.col-9{width: 880px;}
+.col-10{width: 980px;}
+.col-11{width: 1080px;}
+.col-12{width: 1180px;}
+
+.push-1{margin-left:110px;}
+.push-2{margin-left:210px;}
+.push-3{margin-left:310px;}
+.push-4{margin-left:410px;}
+.push-5{margin-left:510px;}
+.push-6{margin-left:610px;}
+.push-7{margin-left:710px;}
+.push-8{margin-left:810px;}
+.push-9{margin-left:910px;}
+.push-10{margin-left:1010px;}
+.push-11{margin-left:1110px;}
+.push-12{margin-left:1210px;}
+
+.pull-1{margin-left:-110px;}
+.pull-2{margin-left:-210px;}
+.pull-3{margin-left:-310px;}
+.pull-4{margin-left:-410px;}
+.pull-5{margin-left:-510px;}
+.pull-6{margin-left:-610px;}
+.pull-7{margin-left:-710px;}
+.pull-8{margin-left:-810px;}
+.pull-9{margin-left:-910px;}
+.pull-10{margin-left:-1010px;}
+.pull-11{margin-left:-1110px;}
+.pull-12{margin-left:-1210px;}
+
