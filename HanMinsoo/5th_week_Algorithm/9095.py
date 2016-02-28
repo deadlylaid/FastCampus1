@@ -13,9 +13,10 @@
 """
 
 how_many = int(input())
-b=[0]*11
+b=[0]*11 #0으로 채워진 리스트를 11개 생성
 insert_num=[]
-for i in range(1,how_many+1):
+
+for i in range(1,how_many+1): #입력 받는 수를 차례대로 리스트에 스택
     insert_num.append(int(input()))
 
 
@@ -27,7 +28,7 @@ for a in range(1,11):
     elif a ==3:
         b[a]=4
     else:
-        b[a]=b[a-1]+b[a-2]+b[a-3]
+        b[a]=b[a-1]+b[a-2]+b[a-3] #점화식
 
 for d in insert_num:
     print(b[d])
